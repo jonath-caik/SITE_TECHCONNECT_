@@ -1,0 +1,439 @@
+:root {
+  font-size: 10px;
+  --main-color: rgb(0, 223, 255);
+  --cor2: rgb(4, 107, 122);
+  --black: #131313;
+  --b: rgb(21, 26, 56);
+  --bg: rgba(21, 26, 56, 0.932);
+  --border: rgb(1, 13, 83);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+.caixa-video {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.caixa-video video {
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.mascara {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 20px;
+  z-index: 4;
+  position: fixed;
+  top: 50%;
+  left: -30%;
+  transform: translate(-50%, -50%);
+}
+
+.interface {
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header/*ESTILO CABEÇALHO*/ {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: var(--bg);
+  border-bottom: var(--border);
+  width: 100vw;
+  background-color: preto;
+}
+
+.interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 1.5rem 0;
+  position: relative;
+  width: 100%;
+}
+
+.interface a img /*LOGO*/ {
+  height: 7rem;
+}
+
+header> div nav a /*MENUS*/ {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 4rem;
+  font-size: 25px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#inicio,
+#caixasobre,
+#caixapalestrantes,
+#modal,
+#inscricao {
+  scroll-margin-top: 120px;
+}
+
+header> div nav a:hover /*MENUS*/ {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  padding-bottom: 0.5rem;
+  transition: 0.3s linear;
+}
+
+.principal {
+  min-height: 100vh;
+  margin: 1rem 20rem;
+  display: flex;
+  align-items: center;
+}
+
+.principal div {
+  max-width: 60rem;
+}
+
+.principal div h3 {
+  color: white;
+  font-size: 6rem;
+  text-transform: uppercase;
+  margin-top: 10rem;
+  margin-bottom: 1.5rem;
+}
+
+.principal div p {
+  font-size: 2rem;
+  color: white;
+  font-weight: bolde;
+  margin-bottom: 1.5rem;
+}
+
+.principal div a {
+  background-color: var(--main-color);
+  cursor: pointer;
+  margin-top: 2rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: var(--border);
+  padding: 1rem 3rem;
+}
+
+.principal div a:hover {
+  letter-spacing: 0.1rem;
+  border: 2px solid var(--border);
+  color: var(--border);
+}
+
+.botaozao button {
+  padding: 10px;
+  position: 15px 40px;
+  font-size: 25px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.botaozao button:hover {
+  transform: scale(1.2);
+}
+
+.caixasobre {
+  border-top: solid 6px var(--border);
+}
+
+.caixasobre h2 {
+  padding-top: 3rem;
+  background-color: var(--bg);
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 3rem;
+  font-size: 4rem;
+}
+
+.caixasobre h2 span {
+  color: var(--main-color);
+}
+
+.sobreimg {
+  margin: 1rem 10rem;
+  width: 15rem;
+  border-radius: 10px;
+}
+
+.caixasobre .sobrecontainer {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.caixasobre .sobrecontainer .sobreimg {
+  flex: 1 1 45rem;
+}
+
+.caixasobre .sobrecontainer .sobretexto {
+  flex: 1 1 45rem;
+  padding: 2rem;
+}
+
+.caixasobre .sobrecontainer .sobretexto h3 {
+  font-size: 3rem;
+  color: white;
+}
+
+.caixasobre .sobrecontainer .sobretexto p {
+  font-size: 1.5rem;
+  font-weight: bolde;
+  color: white;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.caixasobre .sobrecontainer .sobretexto a {
+  text-decoration: none;
+  background-color: var(--cor2);
+  margin-top: 2rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: white;
+  padding: 1rem 3rem;
+  border: none;
+}
+
+.caixasobre .sobrecontainer .sobretexto a:hover {
+  cursor: pointer;
+  border: solid 1px var(--main-color);
+  color: var(--main-color);
+}
+
+.caixapalestrantes {
+  border: solid 6px var(--border);
+  background-color: var(--cor2);
+}
+
+.caixapalestrantes h3 {
+  margin-top: 2rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 5rem;
+}
+
+.caixapalestrantes h3 span {
+  color: var(--main-color);
+}
+
+.caixapalestrantes .palestrantes {
+  display: flex;
+  align-items: center;
+  margin: 1rem 5rem;
+}
+
+.caixapalestrantes .palestrantes .luis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caixapalestrantes .palestrantes .luis h4 {
+  color: var(--main-color);
+  font-size: 3rem;
+}
+.caixapalestrantes .palestrantes .luis img {
+  width: 21rem;
+  border-radius: 10px;
+}
+
+.caixapalestrantes .palestrantes .luis p {
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.caixapalestrantes .palestrantes .gustavo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caixapalestrantes .palestrantes .gustavo h4 {
+  color: var(--main-color);
+  font-size: 3rem;
+}
+
+.caixapalestrantes .palestrantes .gustavo img {
+  width: 20rem;
+  border-radius: 10px;
+}
+
+.caixapalestrantes .palestrantes .gustavo p {
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.caixapalestrantes .palestrantes .marcos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caixapalestrantes .palestrantes .marcos h4 {
+  color: var(--main-color);
+  font-size: 3rem;
+}
+
+.caixapalestrantes .palestrantes .marcos img {
+  width: 20rem;
+  border-radius: 10px;
+}
+
+.caixapalestrantes .palestrantes .marcos p {
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.modal {
+  margin: 0;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.modal h3 {
+  background-color: var(--bg);
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+.modal h3 span {
+  color: var(--main-color);
+}
+
+.modal .endereco {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.modal .endereco .mapa {
+  flex: 1 1 45rem;
+}
+
+.modal .endereco .info {
+  flex: 1 1 45rem;
+}
+
+.modal .endereco .info h2 {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.modal .endereco .info p {
+  font-size: 2rem;
+  font-weight: 250;
+  color: white;
+  line-height: 1.8;
+}
+
+.inscricao {
+  color: white;
+  background-color: var(--cor2);
+  border: solid 4px var(--border);
+}
+
+.inscricao h3 {
+  text-align: center;
+  color: var(--main-color);
+  text-transform: uppercase;
+  padding: 3rem;
+  font-size: 4rem;
+}
+
+.inscricao .inscrevase .gif {
+  margin: 1rem 10rem;
+  width: 15rem;
+  border-radius: 10px;
+}
+
+.inscricao .inscrevase {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.inscricao .inscrevase .forms fieldset {
+  padding: 1.5rem;
+  max-width: 600px;
+}
+
+.inscricao .inscrevase .gif {
+  flex: 1 1 45rem;
+}
+.inscricao .inscrevase .forms {
+  flex: 1 1 45rem;
+}
+
+.inscricao .inscrevase .forms {
+  font-size: 2rem;
+  color: white;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.inscricao .inscrevase .forms .botao {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: var(--b);
+}
+
+.inscricao .inscrevase .forms .botao:hover {
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+.inscricao .inscrevase .forms .termosdeuso:hover {
+  text-decoration: underline;
+}
